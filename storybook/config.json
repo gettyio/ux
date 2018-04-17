@@ -1,0 +1,9 @@
+{
+  "preset": "react-native",
+  "rootDir": "../",
+  "testPathIgnorePatterns": ["__e2e__", "node_modules"],
+  "moduleNameMapper": {
+    ".+\\.(png)$": "jest-static-stubs/$1",
+    "styled-components": "<rootDir>/node_modules/styled-components/dist/styled-components.native.cjs.js"
+  }
+}

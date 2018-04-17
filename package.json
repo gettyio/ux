@@ -1,0 +1,58 @@
+{
+  "name": "player-zoom",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addon-storyshots": "^3.4.0",
+    "@storybook/addons": "^3.4.0",
+    "@storybook/react-native": "^3.4.0",
+    "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "husky": "^0.14.3",
+    "jest-expo": "26.0.0",
+    "jest-static-stubs": "^0.0.1",
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.11.1",
+    "prop-types": "^15.6.1",
+    "react-dom": "16.3.0-alpha.1",
+    "react-native-scripts": "1.13.1",
+    "react-native-storybook-loader": "^1.8.0",
+    "react-test-renderer": "16.3.0-alpha.1"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "jest --config=./storybook/config.json",
+    "storybook": "storybook start -p 7007",
+    "prestorybook": "rnstl",
+    "precommit": "precise-commits"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "expo": "^26.0.0",
+    "react": "16.3.0-alpha.1",
+    "react-native": "0.54.0",
+    "styled-components": "^3.2.5"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": ["./src"],
+      "pattern": "**/story.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "additional_cli_args": {
+      "--config-precedence": "cli-override"
+    }
+  }
+}
